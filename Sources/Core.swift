@@ -764,7 +764,8 @@ class Core: NSObject, UIGestureRecognizerDelegate {
             if grabberAreaFrame.contains(location) {
                 initialScrollOffset = scrollView.contentOffset
             } else {
-                initialScrollOffset = contentOffsetForPinning(of: scrollView)
+//                initialScrollOffset = contentOffsetForPinning(of: scrollView)
+                initialScrollOffset = scrollView.contentOffset
                 let offsetDiff = scrollView.contentOffset - contentOffsetForPinning(of: scrollView)
                 switch layoutAdapter.position {
                 case .top, .left:
